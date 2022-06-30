@@ -18,7 +18,7 @@ var saveBtn8 = $("#btn8");
 var textArea1; ; 
 
 //changes the day to the current day
-$("#currentDay").text(today.format(" dddd, MMMM Do"))
+$("#currentDay").text(today.format("dddd, MMMM Do"))
 
 //saves text to local storage
 saveBtn1.on("click", function() {
