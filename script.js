@@ -49,7 +49,7 @@ saveBtn2.on("click", function() {
 });
 
 var persist2 = localStorage.getItem("10:00")
-area1.text(persist2)
+area2.text(persist2)
 
 saveBtn3.on("click", function() {
     var textArea3 = area3.val();
@@ -57,7 +57,7 @@ saveBtn3.on("click", function() {
 });
 
 var persist3 = localStorage.getItem("11:00")
-area1.text(persist3)
+area3.text(persist3)
 
 saveBtn4.on("click", function() {
     var textArea4 = area4.val();
@@ -65,7 +65,7 @@ saveBtn4.on("click", function() {
 });
 
 var persist4 = localStorage.getItem("12:00")
-area1.text(persist4)
+area4.text(persist4)
 
 saveBtn5.on("click", function() {
     var textArea5 = area5.val();
@@ -73,7 +73,7 @@ saveBtn5.on("click", function() {
 });
 
 var persist5 = localStorage.getItem("1:00")
-area1.text(persist5)
+area5.text(persist5)
 
 saveBtn6.on("click", function() {
     var textArea6 = area6.val();
@@ -81,7 +81,7 @@ saveBtn6.on("click", function() {
 });
 
 var persist6 = localStorage.getItem("2:00")
-area1.text(persist6)
+area6.text(persist6)
 
 saveBtn7.on("click", function() {
     var textArea7 = area7.val();
@@ -89,7 +89,7 @@ saveBtn7.on("click", function() {
 });
 
 var persist7 = localStorage.getItem("3:00")
-area1.text(persist7)
+area7.text(persist7)
 
 saveBtn8.on("click", function() {
     var textArea8 = area8.val();
@@ -97,4 +97,4 @@ saveBtn8.on("click", function() {
 });
 
 var persist8 = localStorage.getItem("4:00")
-area1.text(persist8)
+area8.text(persist8)
