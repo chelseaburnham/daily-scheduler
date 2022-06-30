@@ -20,26 +20,13 @@ var textArea1; ;
 //changes the day to the current day
 $("#currentDay").text(today.format(" dddd, MMMM Do"))
 
-//colors everything in the past red
-function pastTime() {
-
-}
-
-//colors everything in the past red
-function pastTime() {
-
-}
-
-//colors everything in the past red
-function pastTime() {
-
-}
-
+//saves text to local storage
 saveBtn1.on("click", function() {
     var textArea1 = area1.val();
     localStorage.setItem("9:00", textArea1);
 });
 
+//displays current text from local storage in the text area
 var persist1 = localStorage.getItem("9:00")
 area1.text(persist1)
 
@@ -98,3 +85,37 @@ saveBtn8.on("click", function() {
 
 var persist8 = localStorage.getItem("4:00")
 area8.text(persist8)
+
+
+
+
+var now = moment().format("hh:mm");
+
+
+
+//colors everything in the past red
+function pastTime() {
+    if (now < 9) {
+        area1.css("background-color", "red")
+    } else {
+        return
+    }
+}
+
+//colors everything in the current time green
+function currentTime() {
+    if (now = 9) {
+        area1.css("background-color", "green")
+    } else {
+        return
+    }
+}
+
+//colors everything in the future grey
+function futureTime() {
+    if (now > 9) {
+        area1.css("background-color", "grey")
+    } else {
+        return
+    }
+}
