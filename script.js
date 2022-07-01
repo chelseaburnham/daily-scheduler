@@ -17,8 +17,8 @@ var saveBtn7 = $("#btn7");
 var saveBtn8 = $("#btn8");
 var textArea1; ; 
 
-// //changes the day to the current day
-// $("#currentDay").text(today.format("dddd, MMMM Do"))
+//changes the day to the current day
+$("#currentDay").text(today.format("dddd, MMMM Do"))
 
 // //saves text to local storage
 // saveBtn1.on("click", function() {
@@ -89,8 +89,7 @@ var textArea1; ;
 
 
 
-// var now = moment().hour();
-// console.log(now)
+var now = moment().hour();
 
 
 // //colors everything in the past red
@@ -126,5 +125,13 @@ var textArea1; ;
 $(".btn").on("click", function() {
     var userInput = $(this).siblings("textarea").val()
     var textInput = $(this).attr("data-time")
-    console.log(userInput, textInput)
+    localStorage.setItem(textInput, userInput)
 })
+
+$("input").each(function(){
+    var time = $(this).attr("data-time");
+    var dataStorage = localStorage.getItem(time);
+    $(this).siblings("textarea").val(dataStorage)
+
+})
+
